@@ -5,7 +5,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import guru.springframework.sfgjms.config.JmsConfig;
 import guru.springframework.sfgjms.model.HelloMessage;
 import lombok.RequiredArgsConstructor;
-import org.springframework.jms.JmsException;
 import org.springframework.jms.core.JmsTemplate;
 import org.springframework.jms.core.MessageCreator;
 import org.springframework.scheduling.annotation.Scheduled;
@@ -14,7 +13,6 @@ import org.springframework.stereotype.Component;
 import javax.jms.JMSException;
 import javax.jms.Message;
 import javax.jms.Session;
-import javax.xml.transform.sax.SAXSource;
 import java.util.UUID;
 
 @RequiredArgsConstructor

@@ -10,7 +10,6 @@ import org.springframework.messaging.handler.annotation.Headers;
 import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.stereotype.Component;
 
-import javax.jms.Destination;
 import javax.jms.JMSException;
 import javax.jms.Message;
 import java.util.UUID;
@@ -32,8 +31,8 @@ public class HelloListener {
 
     @JmsListener(destination = JmsConfig.MY_SEND_AND_RECEIVE_QUEUE)
     public void listenAndReply(@Payload HelloMessage helloMessage,
-                       @Headers MessageHeaders headers,
-                       Message message) throws JMSException {
+                               @Headers MessageHeaders headers,
+                               Message message) throws JMSException {
 
         HelloMessage replyMessage = HelloMessage.builder()
                 .id(UUID.randomUUID())
